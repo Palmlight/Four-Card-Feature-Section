@@ -67,7 +67,7 @@ body {
 @media (min-width: 1400px) {
     .card-container {
         display: grid;
-        grid-gap: 30px;
+        
         grid-template-areas: 
         ". a ." 
         "b a c"
