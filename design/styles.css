@@ -7,38 +7,96 @@ body {
     font-family: 'Poppins', sans-serif;
     font-size: 15px;
 }
+
+/* Mobile View */
 .header {
-    display: flex;
-    justify-content: center;
-    align-content: center;
-    flex-direction: column;
-    align-items: center;
     padding-top: 2em;
-    padding-bottom: 1em;
+    width: 80vw;
+    margin: 0 auto;
+    align-items: center;
 }
-    .rely {
-        color:  hsl(229, 6%, 66%);
-        font-weight: 100;
-        font-size: 2.3em;
+.rely {
+    color:  hsl(229, 6%, 66%);
+    font-weight: 100;
+    text-align: center;
+    font-size: 1.5em;
+    margin-bottom: 2px;
+
+}
+.tech {
+    color: hsl(234, 12%, 34%);
+    font-weight: 600;
+    text-align: center;
+}
+.artificial {
+    text-align: center;
+    color: hsl(229, 6%, 66%);
+    margin: 10px auto 20px auto;
+    width: 80vw;
+}
+
+/* Desktop/ Bigger Screen Views */
+@media (min-width: 1400px) {
+    .header {
+        display: flex;
+        justify-content: center;
+        align-content: center;
+        flex-direction: column;
+        align-items: center;
+        padding-top: 2em;
+        padding-bottom: 1em;
+    
     }
-    .tech {
-        color: hsl(234, 12%, 34%);
-        font-size: 2.4em;
-        font-weight: 600;
+        .rely{
+            font-size: 2.3em;
+        }
+       
+        .tech {
+            font-size: 2.4em;
+        }
+        .artificial {
+            width: 40vw;
+            text-align: center;
+            margin-top: 10px;
+            color: hsl(229, 6%, 66%);
+        }
+
+}
+
+/* Desktop View */
+@media (min-width: 1400px) {
+    .card-container {
+        display: grid;
+        grid-template-areas: 
+        ". a ." 
+        "b a c"
+        "b d c"
+        ". d .";
+        width: 80vw;
+        margin: 0 auto;
+        
     }
-    .artificial {
-        width: 40vw;
-        text-align: center;
-        margin-top: 10px;
-        color: hsl(229, 6%, 66%);
+    .card1 {
+        grid-area: a;
     }
+    .card2 {
+       
+        grid-area: b;
+    }
+    .card3 {
+        
+        grid-area: c;
+    }
+    .card4 {
+        
+        grid-area: d;
+    }
+
+}
+
+/* Mobile View */
 .card-container {
     display: grid;
-    grid-template-areas: 
-    ". a ." 
-    "b a c"
-    "b d c"
-    ". d .";
     width: 80vw;
     margin: 0 auto;
     
@@ -73,24 +131,36 @@ body {
 }
 .card1 {
     border-top: 4px solid hsl(180, 62%, 55%);
-    grid-area: a;
 }
 .card2 {
     border-top: 4px solid hsl(0, 78%, 62%);
-    grid-area: b;
 }
+    
+    
+
+
 .card3 {
     border-top: 4px solid hsl(34, 97%, 64%);
-    grid-area: c;
+  
 }
 .card4 {
     border-top: 4px solid hsl(212, 86%, 64%);
-    grid-area: d;
+
 }
+
 .attribution { 
     font-size: 11px; 
     text-align: center; 
+   
 }
     .attribution a { 
         color: hsl(228, 45%, 44%); 
     }
+@media (max-width){
+    
+    .attribution { 
+        font-size: 8px; 
+        text-align: center; 
+       
+    }
+}
